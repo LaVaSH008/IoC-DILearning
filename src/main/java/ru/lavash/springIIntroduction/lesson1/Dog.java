@@ -1,4 +1,4 @@
-package ru.lavash.springIIntroduction;
+package ru.lavash.springIIntroduction.lesson1;
 
 public class Dog implements Pet {
     @Override

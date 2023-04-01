@@ -1,6 +1,7 @@
-package ru.lavash.springIIntroduction;
+package ru.lavash.springIIntroduction.lesson2;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import ru.lavash.springIIntroduction.lesson1.Pet;
 
 public class Test2 {
     public static void main(String[] args) {

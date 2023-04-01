@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ru.lavash</groupId>
-  <artifactId>IoCLesson1</artifactId>
+  <artifactId>IoC-DILessons</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 

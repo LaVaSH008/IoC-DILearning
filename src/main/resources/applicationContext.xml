@@ -12,6 +12,8 @@
 
     <bean id="myPerson" class="ru.lavash.springIIntroduction.lesson1.Person">
         <property name="pet" ref="myPet"/>
+        <property name="age" value="25"/>
+        <property name="surname" value="Volkov" />
     </bean>
 
 </beans>

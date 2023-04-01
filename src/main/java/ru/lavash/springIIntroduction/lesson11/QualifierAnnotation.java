@@ -1,4 +1,4 @@
-package ru.lavash.springIIntroduction.losson11;
+package ru.lavash.springIIntroduction.lesson11;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.lavash.springIIntroduction.lesson1.Person;

@@ -1,5 +1,8 @@
 package ru.lavash.springIIntroduction.lesson1;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Dog implements Pet {
     public String getName() {
         return name;

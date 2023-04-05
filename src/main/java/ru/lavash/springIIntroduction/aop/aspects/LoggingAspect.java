@@ -2,11 +2,17 @@ package ru.lavash.springIIntroduction.aop.aspects;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
 public class LoggingAspect {
+
+    //This is creating pointcut for advices
+    @Pointcut("execution(* get*())")
+    private void allGetMethods(){}
+
     //This advice for classes with method getBook()
     //@Before("execution(public void getBook())")
     //This advice for class UniLibrary with method getBook()
@@ -18,9 +24,10 @@ public class LoggingAspect {
     //This advice for methods with many params
     //@Before("execution(public void getBook(..))")
     //This advice for methods with custom object in param
-    @Before("execution(public void getBook(ru.lavash.springIIntroduction.aop.lesson2.Book))")
-    public void beforeGetBookAdvice(){
-        System.out.println("beforeGetBookAdvice: попытка получить книгу");
+    //@Before("execution(public void getBook(ru.lavash.springIIntroduction.aop.lesson2.Book))")
+    @Before("allGetMethods()")
+    public void beforeGetLoggingAdvice(){
+        System.out.println("beforeGetBookAdvice: попытка получить книгу/журнал");
     }
 
     //This advice for all return type
@@ -29,5 +36,10 @@ public class LoggingAspect {
     @Before("execution(* returnBook())")
     public void beforeReturnBookAdvice(){
         System.out.println("beforeReturnBookAdvice: Попытка вернуть книгу");
+    }
+
+    @Before("allGetMethods()")
+    public void beforeGetSecurityAdvice(){
+        System.out.println("beforeGetSecurityAdvice: проверка прав на получение книги/журнала");
     }
 }

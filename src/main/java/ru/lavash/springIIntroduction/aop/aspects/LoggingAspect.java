@@ -5,8 +5,8 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
-@Component
-@Aspect
+//@Component
+//@Aspect
 public class LoggingAspect {
 
     //This is creating pointcut for advices
